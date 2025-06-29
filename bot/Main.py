@@ -5,7 +5,7 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from dotenv import load_dotenv
 
 from src.handlers import setup_routers
-from src.config.config import Settings
+from src.constants import Settings
 
 
 load_dotenv()

@@ -1,0 +1,18 @@
+from enum import StrEnum
+
+
+class Settings(StrEnum):
+    """
+    Настройки проекта
+    """
+    # Django
+    DJANGO_SECRET_KEY = "DJANGO_SECRET_KEY"
+    DJANGO_DEBUG = "DJANGO_DEBUG"
+    DJANGO_ALLOWED_HOSTS = "DJANGO_ALLOWED_HOSTS"
+
+    # БД (Postgres)
+    POSTGRES_USER = "POSTGRES_USER"
+    POSTGRES_PASSWORD = "POSTGRES_PASSWORD"
+    POSTGRES_DB = "POSTGRES_DB"
+    POSTGRES_HOST = "POSTGRES_HOST"
+    POSTGRES_PORT = "POSTGRES_PORT"

@@ -1,5 +1,7 @@
 FROM python:3.11
 
+RUN mkdir -p /app/logs
+
 WORKDIR /app
 
 COPY requirements.txt .
