@@ -1,3 +1,6 @@
+from enum import StrEnum
+
+
 import logging
 import os
 from enum import StrEnum
@@ -16,12 +19,6 @@ class Settings(StrEnum):
 
     # Ю-Касса
     YOOKASSA_TOKEN = "YOOKASSA_TOKEN"
-
-    # БД (Postgres)
-    POSTGRES_USER = "POSTGRES_USER"
-    POSTGRES_PASSWORD = "POSTGRES_PASSWORD"
-    POSTGRES_DB = "POSTGRES_DB"
-    POSTGRES_HOST = "POSTGRES_HOST"
 
 
 def get_logger(name: str) -> logging.Logger:
@@ -53,3 +50,12 @@ def get_logger(name: str) -> logging.Logger:
         logger.addHandler(file_handler)
 
     return logger
+
+
+
+class Messages(StrEnum):
+    """
+    Тексты сообщений
+    """
+    GREETING = "*Привет,* {name}\! Для пользования ботом необходимо *подписаться* на наш *[канал](t.me/{channel})* " \
+               " и *[группу](t.me/{group})* 🫶🏻"

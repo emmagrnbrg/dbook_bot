@@ -5,8 +5,7 @@ from functools import wraps
 
 from dotenv import load_dotenv
 
-from .config.config import Settings
-from .config.constants import Messages
+from .constants import Messages, Settings
 
 load_dotenv()
 
